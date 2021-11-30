@@ -1,7 +1,17 @@
-//fun main(args: Array<String>) {
-//    print("Hello, ${args[0]}!")
-//}
+import java.util.*
 
 fun main(args: Array<String>) {
-    println("${if (args[0].toInt() < 12) "Good morning, Kotlin" else "Good night, Kotlin"}")
+    print("Hello, ${args[0]}!")
+    feedTheFish()
+}
+
+fun feedTheFish() {
+    val day = randomDay()
+    val food = "pellets"
+    println ("Today is $day and the fish eat $food")
+}
+
+fun randomDay() : String {
+    val week = listOf ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+    return week[Random().nextInt(7)]
 }
